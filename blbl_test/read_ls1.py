@@ -1,0 +1,6 @@
+f=open("city.csv","r")
+info=f.read()
+f.close()
+print(info)
+ls=info.split(",")
+print(ls)

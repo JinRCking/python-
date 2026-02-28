@@ -1,0 +1,94 @@
+py，c中   
+{0:.4f}    ("%0.4f",float a=3.19999)   
+都会进行四舍五入
+py中点.后不写数字默认为6，保存6位数
+
+
+
+
+
+eval() arg 1 must be a string, bytes or code object
+
+
+
+
+
+split('\d+', x)：这里的 \d+ 是一个正则表达式模式
+表示一个或多个数字字符（d 代表数字，+ 表示匹配一次或多次）
+
+
+
+
+
+x=[10,20,30,40]
+s=0
+for i in x:
+  if i>30:
+    break
+  s=s+i
+print(s)
+当 break 语句被执行时，它立即跳出整个 for 循环，不再继续迭代剩下的元素
+
+
+
+
+
+
+
+A. copy(): 这个函数用于复制文件，而不是文件夹。
+例如，shutil.copy(src, dst) 会将文件从 src 复制到 dst。
+B. copytree(): 这个函数用于递归地复制整个目录树。它会复制指定目录及其所有内容到新的位置。
+例如，shutil.copytree(src, dst) 会将目录树从 src 复制到 dst。
+C. copyfile(): 这个函数用于复制文件内容，但不复制元数据（如权限和修改时间）。
+例如，shutil.copyfile(src, dst) 会将文件内容从 src 复制到 dst。
+D. move(): 这个函数用于移动文件或目录到新的位置。它不仅可以移动文件，还可以移动整个目录。
+例如，shutil.move(src, dst) 会将文件或目录从 src 移动到 dst。
+
+
+
+
+
+
+以下选项中说法不正确的是__D____。
+
+A. 程序源代码不能直接在机器上运行
+B. Python解释器可以将源代码生成目标代码后直接运行
+C. Python解释器兼有部分编译器的功能
+D. 静态语言采用解释方式执行，脚本语言采用编译方式执行   //返了
+
+
+
+
+
+
+s=3
+for i in range(1,10):
+  if s>7:
+    break
+  s=s+i
+print("i={},s={}".format(i,s)) 
+虽然 i 在第三次迭代中是 3，但在这次迭代完成后 i 将会更新为 4
+（因为 for 循环会在每次迭代后更新 i 的值）
+然后 break 语句才会中断循环。因此， i 的最终值是 4。
+
+
+
+
+
+@staticmethod：用于定义静态方法。这种方法不需要访问实例（self）或类（cls）本身。
+@classmethod：用于定义类方法。这种方法接收类作为第一个参数，通常命名为 cls。
+@property：用于将方法转换为只读属性。
+@self：不是一个有效的装饰器。
+
+
+
+
+
+s=0
+for i in range(1,8):
+  if i%2==1:
+    continue              #continue意思为继续循环
+  s=s+i
+print("s={}".format(s))
+》》》12
+要是continue改为break则输出0
